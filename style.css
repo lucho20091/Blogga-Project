@@ -23,7 +23,7 @@ nav{
     align-items: center;
     padding: 51px 80px;
 }
-.nav-logo > img{
+.nav-logo > a > img{
     margin-top: 10px;
     cursor: pointer;
 }

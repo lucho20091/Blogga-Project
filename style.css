@@ -25,7 +25,6 @@ nav{
 }
 .nav-logo > a > img{
     margin-top: 10px;
-    cursor: pointer;
 }
 .nav-ul{
     display: flex;

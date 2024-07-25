@@ -14,7 +14,8 @@ body{
 /* Header Lucho20091*/
 header{
     background-color: var(--blueish-color);
-    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
     height: 555px;
 }
 nav{
@@ -30,6 +31,7 @@ nav{
     display: flex;
     list-style: none;
     gap: 40px;
+    padding: 0;
 }
 .nav-ul > li > a{
     text-decoration: none;
@@ -48,6 +50,14 @@ nav{
 }
 .nav-btn:hover{
     background-color:  rgba(255, 255, 255, 0.171);;
+}
+@media (max-width: 915px){
+    nav{
+        padding: 51px 20px;
+    }
+    .nav-ul{
+        gap: 20px;
+    }
 }
 /* Main */
 

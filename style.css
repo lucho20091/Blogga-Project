@@ -23,12 +23,12 @@ nav{
     align-items: center;
     padding: 51px 80px;
 }
-.nav-logo{
-    height: fit-content;
+.nav-logo > img{
+    margin-top: 10px;
+    cursor: pointer;
 }
 .nav-ul{
     display: flex;
-    align-items: center;
     list-style: none;
     gap: 40px;
 }
@@ -45,6 +45,10 @@ nav{
     border-radius: 8px;
     color: white;
     font-size: 0.9rem;
+    cursor: pointer;
+}
+.nav-btn:hover{
+    background-color:  rgba(255, 255, 255, 0.171);;
 }
 /* Main */
 

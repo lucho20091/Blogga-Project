@@ -1,7 +1,6 @@
 :root{
     --blueish-color: #232E52;
     --font-roboto: "Roboto Slab", serif;
-
 }
 *, *::before, *::after{
     box-sizing: border-box;

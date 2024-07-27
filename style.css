@@ -1,7 +1,6 @@
 :root{
     --blueish-color: #232E52;
     --font-roboto: "Roboto Slab", serif;
-
 }
 *, *::before, *::after{
     box-sizing: border-box;
@@ -14,8 +13,10 @@ body{
 /* Header Lucho20091*/
 header{
     background-color: var(--blueish-color);
-    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
     height: 555px;
+    border-radius: 10px;
 }
 nav{
     display: flex;
@@ -30,6 +31,7 @@ nav{
     display: flex;
     list-style: none;
     gap: 40px;
+    padding: 0;
 }
 .nav-ul > li > a{
     text-decoration: none;
@@ -45,9 +47,66 @@ nav{
     color: white;
     font-size: 0.9rem;
     cursor: pointer;
+    font-weight: bold;
 }
 .nav-btn:hover{
-    background-color:  rgba(255, 255, 255, 0.171);;
+    background-color:  rgba(255, 255, 255, 0.171);
+}
+@media (max-width: 915px){
+    nav{
+        padding: 51px 20px;
+    }
+    .nav-ul{
+        gap: 20px;
+    }
+}
+@media (max-width: 696px){
+    body{
+        padding: 0;
+    }
+    header{
+        border-radius: 0;
+    }
+    nav{
+        padding: 20px;
+        display: grid;
+        grid-template-areas:    "logo button"
+                                "nav-ul nav-ul";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 2fr;
+    }
+    .nav-logo{
+        grid-area: logo;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+    .nav-ul{
+        grid-area: nav-ul;
+        flex-wrap: wrap;  
+        margin: 0;
+        gap: 1%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-ul > li {
+        min-width: 49%;
+        display: flex;
+        margin-top: 1%;
+    }
+    .nav-ul > li > a{
+        padding: 15px 0;
+        text-align: center;
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .nav-ul > li > a:hover{
+        background-color:  rgba(255, 255, 255, 0.171);
+    }
+    .nav-btn{
+        grid-area: button;
+        align-self: flex-start;
+        justify-self: flex-end;
+    }
 }
 /* Main */
 
@@ -97,4 +156,87 @@ nav{
 
 /* Section 3 */
 
-/* Footer */
+/* Footer Lucho20091*/
+footer{
+    background-color: var(--blueish-color);
+    max-width: 970px;
+    height: 325px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 10px;
+}
+.footer-div h4{
+    font-size: 1.75rem;
+    line-height: 1.30;
+    text-align: center;
+    margin: 100px 0 0;
+    padding: 80px 0 0;
+}
+.footer-div p{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 12px 0 0;
+    padding-bottom: 40px;
+}
+.footer-form{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer-form > input{
+    flex: 1;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-family: inherit;
+}
+.footer-form > button{
+    width: 136px;
+    background-color: #8CEEAD;
+    color: #232E52;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    font-family: inherit;
+}
+@media (max-width: 696px){
+    footer{
+        border-radius: 0;
+    }
+}
+@media (max-width: 440px){
+    footer{
+        border-radius: 0;
+    }
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 100px 0 0;
+    }
+    .footer-div > h4{
+        padding: 0;
+        margin: 0;
+    }
+    .footer-form{
+        flex-direction: column;
+        width: 90%;
+    }
+    .footer-form > input{
+        border-radius: 8px;
+    }
+    .footer-form > button{
+        margin-top: 20px;
+        height: 50px;
+        align-self: flex-end;
+        border-radius: 8px;
+    }
+}

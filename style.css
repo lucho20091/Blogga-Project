@@ -12,14 +12,18 @@ body{
 
 /* Header Lucho20091*/
 header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--blueish-color);
-    max-width: 1420px;
+    width: 100%;
     margin: 0 auto;
     height: 555px;
     border-radius: 10px;
 }
 nav{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 51px 80px;
@@ -240,3 +244,32 @@ footer{
         border-radius: 8px;
     }
 }
+
+/* Nokuziariki CSS changes */
+
+.head-zone {
+    width: 50%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.head-hello {
+    color: #fff;
+    font-family: 'Graphik Trial', sans-serif;
+    font-size: 16px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+}
+
+.head-text {
+    color: #fff;
+    font-family: 'Graphik Trial', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 62px;
+}
+
